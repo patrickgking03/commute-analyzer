@@ -819,7 +819,7 @@ const CommuteAnalysis = () => {
       onClick={() => setIsDropdownOpen(!isDropdownOpen)} 
       className="w-full border rounded-lg p-2.5 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-left flex justify-between items-center"
     >
-      {selectedOffice || "Enter work address"}
+      {selectedOffice || "Select company or enter address"}
       <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
       </svg>
@@ -852,7 +852,7 @@ const CommuteAnalysis = () => {
         type="text"
         value={customOfficeAddress}
         onChange={handleAddressInput}
-        placeholder="Search work location"
+        placeholder="Enter address"
         className="w-full border rounded-lg p-2.5 focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
       />
       {addressSuggestions.length > 0 && (
