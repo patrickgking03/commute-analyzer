@@ -426,11 +426,11 @@ const CommuteAnalysis = () => {
       };
 
       const fetchSuggestions = async (query: string) => {
-        if (query.length < 3) return; // Prevent unnecessary calls for short queries.
+        if (query.length < 3) return;
     
         try {
             const response = await fetch(
-                `https://nominatim.openstreetmap.org/search?format=json&q=${encodeURIComponent(query)}`
+                `https://nominatim.openstreetmap.org/search?format=json&q=${encodeURIComponent(query + ' Los Angeles')}&bounded=1&viewbox=-118.723549,34.330899,-118.155437,33.704538`
             );
             if (!response.ok) {
                 console.error('Error fetching suggestions:', response.statusText);
@@ -778,7 +778,7 @@ const CommuteAnalysis = () => {
 
     const handleShare = () => {
         navigator.clipboard.writeText(
-          `Check out my commute analysis! Key insights: Work Location: ${
+          `Check out my commute analysis! Key insights: Work Destination: ${
             selectedOffice || customOfficeAddress
           }, Time: ${selectedTime}, Day Type: ${selectedDay}`
         );
@@ -813,13 +813,13 @@ const CommuteAnalysis = () => {
             </div>
     
             <div>
-  <label className="block text-sm font-medium mb-2">Work Location</label>
+  <label className="block text-sm font-medium mb-2">Work Destination</label>
   <div className="relative">
     <button 
       onClick={() => setIsDropdownOpen(!isDropdownOpen)} 
       className="w-full border rounded-lg p-2.5 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-left flex justify-between items-center"
     >
-      {selectedOffice || "Select work location"}
+      {selectedOffice || "Enter work address"}
       <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
       </svg>
