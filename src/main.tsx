@@ -287,7 +287,12 @@ const CommuteAnalysis = () => {
         "El Segundo": [33.9192, -118.4164],
         "Manhattan Beach": [33.8847, -118.4109],
         "Mar Vista": [34.0037, -118.4289],
-        "Culver City": [34.0211, -118.3965]
+        "Culver City": [34.0211, -118.3965],
+        "Newport Beach": [33.6189, -117.9289],
+        "Corona Del Mar": [33.6000, -117.8721],
+        "Huntington Beach": [33.6595, -118.0010],
+        "Torrance": [33.8358, -118.3406],
+        "Palos Verdes": [33.7445, -118.3870]
     };
 
     const neighborhoodStats = {
@@ -370,7 +375,47 @@ const CommuteAnalysis = () => {
           walkability: "A-",
           nightlife: "B+",
           zillowLink: "https://www.zillow.com/culver-city-ca/"
-        }
+        },
+        "Newport Beach": {
+          rent: "$$$$",
+          safety: "A+",
+          amenities: ["Beach", "Restaurants", "Shopping", "Boating", "Parks"],
+          walkability: "B+",
+          nightlife: "A-",
+          zillowLink: "https://www.zillow.com/newport-beach-ca/"
+      },
+      "Corona Del Mar": {
+          rent: "$$$$",
+          safety: "A+",
+          amenities: ["Beach", "Luxury Shopping", "Restaurants", "Parks"],
+          walkability: "A-",
+          nightlife: "B+",
+          zillowLink: "https://www.zillow.com/corona-del-mar-newport-beach-ca/"
+      },
+      "Huntington Beach": {
+          rent: "$$$",
+          safety: "A-",
+          amenities: ["Beach", "Surfing", "Shopping", "Restaurants", "Parks"],
+          walkability: "B+",
+          nightlife: "A-",
+          zillowLink: "https://www.zillow.com/huntington-beach-ca/"
+      },
+      "Torrance": {
+          rent: "$$$",
+          safety: "A-",
+          amenities: ["Shopping", "Restaurants", "Parks", "Beach Access"],
+          walkability: "B",
+          nightlife: "B",
+          zillowLink: "https://www.zillow.com/torrance-ca/"
+      },
+      "Palos Verdes": {
+          rent: "$$$$",
+          safety: "A+",
+          amenities: ["Hiking", "Ocean Views", "Golf", "Parks", "Nature Preserves"],
+          walkability: "C+",
+          nightlife: "C",
+          zillowLink: "https://www.zillow.com/palos-verdes-estates-ca/"
+      }
       };
       
       // Render neighborhood stats (to be added at the top of the file with utility functions)
